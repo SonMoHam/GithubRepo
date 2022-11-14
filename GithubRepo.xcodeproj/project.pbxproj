@@ -28,6 +28,8 @@
 		1224991D292241BB003665DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1224991C292241BB003665DA /* RxSwift */; };
 		12249920292241CA003665DA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1224991F292241CA003665DA /* SnapKit */; };
 		12249922292242B5003665DA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12249921292242B5003665DA /* NetworkService.swift */; };
+		122499252922455F003665DA /* UseCaseProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499242922455F003665DA /* UseCaseProviderImpl.swift */; };
+		122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499262922456A003665DA /* GithubUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		1224991229223148003665DA /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		1224991529223A1F003665DA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		12249921292242B5003665DA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		122499242922455F003665DA /* UseCaseProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProviderImpl.swift; sourceTree = "<group>"; };
+		122499262922456A003665DA /* GithubUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +220,18 @@
 			children = (
 				1224991529223A1F003665DA /* Endpoint.swift */,
 				12249921292242B5003665DA /* NetworkService.swift */,
+				1224992329224536003665DA /* UseCases */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1224992329224536003665DA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				122499242922455F003665DA /* UseCaseProviderImpl.swift */,
+				122499262922456A003665DA /* GithubUseCaseImpl.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,9 +383,11 @@
 				122498BF29220BBA003665DA /* ViewController.swift in Sources */,
 				1224990C2922177E003665DA /* GithubUser.swift in Sources */,
 				1224991629223A1F003665DA /* Endpoint.swift in Sources */,
+				122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */,
 				1224990E292218E9003665DA /* GithubRepository.swift in Sources */,
 				12249922292242B5003665DA /* NetworkService.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
+				122499252922455F003665DA /* UseCaseProviderImpl.swift in Sources */,
 				1224991129222ECE003665DA /* GithubUseCase.swift in Sources */,
 				122498BD29220BBA003665DA /* SceneDelegate.swift in Sources */,
 				1224991329223148003665DA /* UseCaseProvider.swift in Sources */,
