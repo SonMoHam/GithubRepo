@@ -27,6 +27,7 @@
 		12249905292214C0003665DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 12249904292214C0003665DA /* Alamofire */; };
 		12249908292214E0003665DA /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 12249907292214E0003665DA /* ReactorKit */; };
 		1224990C2922177E003665DA /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224990B2922177E003665DA /* GithubUser.swift */; };
+		1224990E292218E9003665DA /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224990D292218E9003665DA /* GithubRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		122498DB29220BBC003665DA /* GithubRepoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoUITests.swift; sourceTree = "<group>"; };
 		122498DD29220BBC003665DA /* GithubRepoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1224990B2922177E003665DA /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		1224990D292218E9003665DA /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				1224990B2922177E003665DA /* GithubUser.swift */,
+				1224990D292218E9003665DA /* GithubRepository.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				122498BF29220BBA003665DA /* ViewController.swift in Sources */,
 				1224990C2922177E003665DA /* GithubUser.swift in Sources */,
+				1224990E292218E9003665DA /* GithubRepository.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				122498BD29220BBA003665DA /* SceneDelegate.swift in Sources */,
 			);
