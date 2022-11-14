@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 public protocol GithubUseCase {
-
+    func fetchUser(name: String) -> Observable<GithubUser>
+    func fetchRepositories(of userName: String) -> Observable<[GithubRepository]>
 }
 

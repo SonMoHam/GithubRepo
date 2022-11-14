@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GithubRepository {
+public struct GithubRepository {
     let name: String
     let description: String?
     let language: String?

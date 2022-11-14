@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GithubUser {
+public struct GithubUser {
     let name: String
     let followers: Int
 }
