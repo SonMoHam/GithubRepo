@@ -26,6 +26,7 @@
 		1224990229221496003665DA /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1224990129221496003665DA /* RxSwift-Dynamic */; };
 		12249905292214C0003665DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 12249904292214C0003665DA /* Alamofire */; };
 		12249908292214E0003665DA /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 12249907292214E0003665DA /* ReactorKit */; };
+		1224990C2922177E003665DA /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224990B2922177E003665DA /* GithubUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		122498D729220BBC003665DA /* GithubRepoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubRepoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		122498DB29220BBC003665DA /* GithubRepoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoUITests.swift; sourceTree = "<group>"; };
 		122498DD29220BBC003665DA /* GithubRepoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1224990B2922177E003665DA /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				122498EB29220D1B003665DA /* App */,
 				122498EC29220D32003665DA /* Presentation */,
+				1224990929221718003665DA /* Domain */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -176,6 +179,22 @@
 				122498C829220BBC003665DA /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1224990929221718003665DA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1224990A2922173F003665DA /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1224990A2922173F003665DA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1224990B2922177E003665DA /* GithubUser.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				122498BF29220BBA003665DA /* ViewController.swift in Sources */,
+				1224990C2922177E003665DA /* GithubUser.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				122498BD29220BBA003665DA /* SceneDelegate.swift in Sources */,
 			);
