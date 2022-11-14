@@ -29,6 +29,7 @@
 		1224990C2922177E003665DA /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224990B2922177E003665DA /* GithubUser.swift */; };
 		1224990E292218E9003665DA /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224990D292218E9003665DA /* GithubRepository.swift */; };
 		1224991129222ECE003665DA /* GithubUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224991029222ECE003665DA /* GithubUseCase.swift */; };
+		1224991329223148003665DA /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224991229223148003665DA /* UseCaseProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1224990B2922177E003665DA /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		1224990D292218E9003665DA /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		1224991029222ECE003665DA /* GithubUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUseCase.swift; sourceTree = "<group>"; };
+		1224991229223148003665DA /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				1224991029222ECE003665DA /* GithubUseCase.swift */,
+				1224991229223148003665DA /* UseCaseProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				1224991129222ECE003665DA /* GithubUseCase.swift in Sources */,
 				122498BD29220BBA003665DA /* SceneDelegate.swift in Sources */,
+				1224991329223148003665DA /* UseCaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
