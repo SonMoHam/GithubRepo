@@ -27,6 +27,7 @@
 		1224991B292241BB003665DA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1224991A292241BB003665DA /* RxRelay */; };
 		1224991D292241BB003665DA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1224991C292241BB003665DA /* RxSwift */; };
 		12249920292241CA003665DA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1224991F292241CA003665DA /* SnapKit */; };
+		12249922292242B5003665DA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12249921292242B5003665DA /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		1224991029222ECE003665DA /* GithubUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUseCase.swift; sourceTree = "<group>"; };
 		1224991229223148003665DA /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		1224991529223A1F003665DA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		12249921292242B5003665DA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				1224991529223A1F003665DA /* Endpoint.swift */,
+				12249921292242B5003665DA /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				1224990C2922177E003665DA /* GithubUser.swift in Sources */,
 				1224991629223A1F003665DA /* Endpoint.swift in Sources */,
 				1224990E292218E9003665DA /* GithubRepository.swift in Sources */,
+				12249922292242B5003665DA /* NetworkService.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				1224991129222ECE003665DA /* GithubUseCase.swift in Sources */,
 				122498BD29220BBA003665DA /* SceneDelegate.swift in Sources */,
