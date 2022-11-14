@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GithubUser {
+public struct GithubUser: Decodable {
     let name: String
     let followers: Int
 }

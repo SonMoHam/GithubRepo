@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GithubRepository {
+public struct GithubRepository: Decodable {
     let name: String
     let description: String?
     let language: String?
