@@ -29,7 +29,10 @@ final class AppManager {
                 image: UIImage(systemName: "person.fill"),
                 tag: 0)
         }
-        let repositoryViewController = RepositoryViewController().then {
+        let repositoryViewReactor = RepositoryViewReactor(useCase: useCase)
+        let repositoryViewController = RepositoryViewController(
+            reactor: repositoryViewReactor
+        ).then {
             $0.tabBarItem = UITabBarItem(
                 title: "Repository",
                 image: UIImage(systemName: "list.bullet"),
