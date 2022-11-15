@@ -22,14 +22,12 @@ final class AppManager {
     
     func configureMainInterface(in window: UIWindow?) {
         let userInfoViewController = UserInfoViewController().then {
-            $0.view.backgroundColor = .yellow.withAlphaComponent(0.2)
             $0.tabBarItem = UITabBarItem(
                 title: "User Info",
                 image: UIImage(systemName: "person.fill"),
                 tag: 0)
         }
         let repositoryViewController = RepositoryViewController().then {
-            $0.view.backgroundColor = .red.withAlphaComponent(0.2)
             $0.tabBarItem = UITabBarItem(
                 title: "Repository",
                 image: UIImage(systemName: "list.bullet"),
@@ -37,8 +35,9 @@ final class AppManager {
         }
         
         let tabBarController = UITabBarController()
+        tabBarController.view.backgroundColor = .systemBackground
         tabBarController.setViewControllers([userInfoViewController, repositoryViewController], animated: false)
-        tabBarController.tabBar.backgroundColor = .systemBackground
+        tabBarController.tabBar.backgroundColor = .systemGray5
         
         window?.rootViewController = tabBarController
     }
