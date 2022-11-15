@@ -32,6 +32,7 @@
 		122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499262922456A003665DA /* GithubUseCaseImpl.swift */; };
 		1224992A292330DF003665DA /* EndpointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12249929292330DF003665DA /* EndpointsProvider.swift */; };
 		1224992C292330F9003665DA /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224992B292330F9003665DA /* GithubEndpoints.swift */; };
+		1224993029233EEC003665DA /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224992F29233EEC003665DA /* AppManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		122499262922456A003665DA /* GithubUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUseCaseImpl.swift; sourceTree = "<group>"; };
 		12249929292330DF003665DA /* EndpointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointsProvider.swift; sourceTree = "<group>"; };
 		1224992B292330F9003665DA /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
+		1224992F29233EEC003665DA /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				122498BA29220BBA003665DA /* AppDelegate.swift */,
 				122498BC29220BBA003665DA /* SceneDelegate.swift */,
+				1224992F29233EEC003665DA /* AppManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				1224991629223A1F003665DA /* Endpoint.swift in Sources */,
 				122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */,
 				1224990E292218E9003665DA /* GithubRepository.swift in Sources */,
+				1224993029233EEC003665DA /* AppManager.swift in Sources */,
 				12249922292242B5003665DA /* NetworkService.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				122499252922455F003665DA /* UseCaseProviderImpl.swift in Sources */,
