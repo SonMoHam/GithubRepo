@@ -21,6 +21,7 @@ public final class Endpoint<R>: Requestable {
     public let method: HTTPMethodType
     public let headerParameters: [String : String]
     public let queryParameters: [String : Any]
+    public let queryParametersEncodable: Encodable?
     public let bodyParameters: [String : Any]
     
     init(
@@ -29,6 +30,7 @@ public final class Endpoint<R>: Requestable {
         method: HTTPMethodType,
         headerParameters: [String : String] = [:],
         queryParameters: [String : Any] = [:],
+        queryParametersEncodable: Encodable? = nil,
         bodyParameters: [String : Any] = [:]
     ) {
         self.baseURL = baseURL
@@ -36,6 +38,7 @@ public final class Endpoint<R>: Requestable {
         self.method = method
         self.headerParameters = headerParameters
         self.queryParameters = queryParameters
+        self.queryParametersEncodable = queryParametersEncodable
         self.bodyParameters = bodyParameters
     }
 }
@@ -48,6 +51,7 @@ public protocol Requestable {
     var method: HTTPMethodType { get }
     var headerParameters: [String: String] { get }
     var queryParameters: [String: Any] { get }
+    var queryParametersEncodable: Encodable? { get }
     var bodyParameters: [String: Any] { get }
     
     // encodable ...
@@ -63,6 +67,7 @@ extension Requestable {
         }
         var urlQueryItem: [URLQueryItem] = []
         
+        let queryParameters = queryParametersEncodable?.toDictionary() ?? self.queryParameters
         queryParameters.forEach {
             urlQueryItem.append(.init(name: $0.key, value: "\($0.value)"))
         }
@@ -85,5 +90,13 @@ extension Requestable {
             urlRequest.setValue(value, forHTTPHeaderField: key)
         }
         return urlRequest
+    }
+}
+
+private extension Encodable {
+    func toDictionary() -> [String: Any]? {
+        guard let data = try? JSONEncoder().encode(self) else { return nil }
+        let jsonData = try? JSONSerialization.jsonObject(with: data)
+        return jsonData as? [String: Any]
     }
 }
