@@ -8,3 +8,10 @@
 import Foundation
 
 public final class DefaultUseCaseProvider { }
+
+public final class StubUseCaseProvider: UseCaseProvider {
+    public func makeGithubUseCase() -> GithubUseCase {
+        return StubGithubUseCase()
+    }
+
+}
