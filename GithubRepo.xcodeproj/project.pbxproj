@@ -160,7 +160,7 @@
 				122498EB29220D1B003665DA /* App */,
 				122498EC29220D32003665DA /* Presentation */,
 				1224990929221718003665DA /* Domain */,
-				12249914292239FC003665DA /* Network */,
+				12249914292239FC003665DA /* Data */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -219,15 +219,13 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		12249914292239FC003665DA /* Network */ = {
+		12249914292239FC003665DA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1224991529223A1F003665DA /* Endpoint.swift */,
-				12249921292242B5003665DA /* NetworkService.swift */,
-				122499282923309B003665DA /* API */,
+				1224992E29233D68003665DA /* Network */,
 				1224992329224536003665DA /* UseCases */,
 			);
-			path = Network;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		1224992329224536003665DA /* UseCases */ = {
@@ -246,6 +244,16 @@
 				1224992B292330F9003665DA /* GithubEndpoints.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1224992E29233D68003665DA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1224991529223A1F003665DA /* Endpoint.swift */,
+				12249921292242B5003665DA /* NetworkService.swift */,
+				122499282923309B003665DA /* API */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
