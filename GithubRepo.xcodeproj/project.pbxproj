@@ -30,6 +30,8 @@
 		12249922292242B5003665DA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12249921292242B5003665DA /* NetworkService.swift */; };
 		122499252922455F003665DA /* UseCaseProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499242922455F003665DA /* UseCaseProviderImpl.swift */; };
 		122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499262922456A003665DA /* GithubUseCaseImpl.swift */; };
+		1224992A292330DF003665DA /* EndpointsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12249929292330DF003665DA /* EndpointsProvider.swift */; };
+		1224992C292330F9003665DA /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224992B292330F9003665DA /* GithubEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		12249921292242B5003665DA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		122499242922455F003665DA /* UseCaseProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProviderImpl.swift; sourceTree = "<group>"; };
 		122499262922456A003665DA /* GithubUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUseCaseImpl.swift; sourceTree = "<group>"; };
+		12249929292330DF003665DA /* EndpointsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointsProvider.swift; sourceTree = "<group>"; };
+		1224992B292330F9003665DA /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 			children = (
 				1224991529223A1F003665DA /* Endpoint.swift */,
 				12249921292242B5003665DA /* NetworkService.swift */,
+				122499282923309B003665DA /* API */,
 				1224992329224536003665DA /* UseCases */,
 			);
 			path = Network;
@@ -232,6 +237,15 @@
 				122499262922456A003665DA /* GithubUseCaseImpl.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		122499282923309B003665DA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				12249929292330DF003665DA /* EndpointsProvider.swift */,
+				1224992B292330F9003665DA /* GithubEndpoints.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +395,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				122498BF29220BBA003665DA /* ViewController.swift in Sources */,
+				1224992A292330DF003665DA /* EndpointsProvider.swift in Sources */,
 				1224990C2922177E003665DA /* GithubUser.swift in Sources */,
+				1224992C292330F9003665DA /* GithubEndpoints.swift in Sources */,
 				1224991629223A1F003665DA /* Endpoint.swift in Sources */,
 				122499272922456A003665DA /* GithubUseCaseImpl.swift in Sources */,
 				1224990E292218E9003665DA /* GithubRepository.swift in Sources */,
