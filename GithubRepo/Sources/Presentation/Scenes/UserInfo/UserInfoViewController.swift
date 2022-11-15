@@ -13,7 +13,14 @@ import SnapKit
 import Then
 
 final class UserInfoViewController: UIViewController, View {
+    
+    // MARK: Properties
+    
     var disposeBag = DisposeBag()
+    let label = UILabel().then {
+        $0.numberOfLines = 0
+        $0.text = "UserInfoVC"
+    }
     
     // MARK: Initializing
     
@@ -31,17 +38,20 @@ final class UserInfoViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let label = UILabel().then {
-            $0.text = "UserInfoVC"
-        }
-        view.addSubview(label)
+        self.view.addSubview(label)
+        setupConstraints()
+    }
+    
+    // MARK: Methods
+
+    func setupConstraints() {
         label.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
     
     func bind(reactor: UserInfoViewReactor) {
+        print(#function)
         bindAction(reactor)
         bindState(reactor)
     }
@@ -51,10 +61,16 @@ final class UserInfoViewController: UIViewController, View {
 
 private extension UserInfoViewController {
     func bindAction(_ reactor: UserInfoViewReactor) {
-        
+        self.rx.viewDidLoad
+            .map { Reactor.Action.refresh }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
     
     func bindState(_ reactor: UserInfoViewReactor) {
-        
+        reactor.state.asObservable()
+            .map { "userName: \($0.user?.name ?? "user") followers: \(($0.user?.followers ?? 0))" }
+            .bind(to: label.rx.text)
+            .disposed(by: disposeBag)
     }
 }
