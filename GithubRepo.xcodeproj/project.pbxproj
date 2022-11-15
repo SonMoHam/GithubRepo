@@ -35,6 +35,7 @@
 		1224993429235F11003665DA /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224993329235F11003665DA /* UserInfoViewController.swift */; };
 		1224993729235F4D003665DA /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224993629235F4D003665DA /* RepositoryViewController.swift */; };
 		122499392923702E003665DA /* UserInfoViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499382923702E003665DA /* UserInfoViewReactor.swift */; };
+		1224993C29237E22003665DA /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224993B29237E22003665DA /* UIViewController+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		1224993329235F11003665DA /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		1224993629235F4D003665DA /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		122499382923702E003665DA /* UserInfoViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewReactor.swift; sourceTree = "<group>"; };
+		1224993B29237E22003665DA /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				122498EC29220D32003665DA /* Presentation */,
 				1224990929221718003665DA /* Domain */,
 				12249914292239FC003665DA /* Data */,
+				1224993A29237E01003665DA /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -287,6 +290,14 @@
 				1224993629235F4D003665DA /* RepositoryViewController.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		1224993A29237E01003665DA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1224993B29237E22003665DA /* UIViewController+Rx.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +455,7 @@
 				1224993429235F11003665DA /* UserInfoViewController.swift in Sources */,
 				1224993729235F4D003665DA /* RepositoryViewController.swift in Sources */,
 				1224993029233EEC003665DA /* AppManager.swift in Sources */,
+				1224993C29237E22003665DA /* UIViewController+Rx.swift in Sources */,
 				12249922292242B5003665DA /* NetworkService.swift in Sources */,
 				122499392923702E003665DA /* UserInfoViewReactor.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
