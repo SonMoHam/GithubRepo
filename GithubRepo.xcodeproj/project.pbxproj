@@ -34,6 +34,7 @@
 		1224993029233EEC003665DA /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224992F29233EEC003665DA /* AppManager.swift */; };
 		1224993429235F11003665DA /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224993329235F11003665DA /* UserInfoViewController.swift */; };
 		1224993729235F4D003665DA /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224993629235F4D003665DA /* RepositoryViewController.swift */; };
+		122499392923702E003665DA /* UserInfoViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122499382923702E003665DA /* UserInfoViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		1224992F29233EEC003665DA /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		1224993329235F11003665DA /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		1224993629235F4D003665DA /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		122499382923702E003665DA /* UserInfoViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewReactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				1224993329235F11003665DA /* UserInfoViewController.swift */,
+				122499382923702E003665DA /* UserInfoViewReactor.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				1224993729235F4D003665DA /* RepositoryViewController.swift in Sources */,
 				1224993029233EEC003665DA /* AppManager.swift in Sources */,
 				12249922292242B5003665DA /* NetworkService.swift in Sources */,
+				122499392923702E003665DA /* UserInfoViewReactor.swift in Sources */,
 				122498BB29220BBA003665DA /* AppDelegate.swift in Sources */,
 				122499252922455F003665DA /* UseCaseProviderImpl.swift in Sources */,
 				1224991129222ECE003665DA /* GithubUseCase.swift in Sources */,
