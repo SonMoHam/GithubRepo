@@ -21,7 +21,9 @@ final class AppManager {
     }
     
     func configureMainInterface(in window: UIWindow?) {
-        let userInfoViewController = UserInfoViewController().then {
+        let useCase = networkUseCaseProvider.makeGithubUseCase()
+        let userInfoViewReactor = UserInfoViewReactor(useCase: useCase)
+        let userInfoViewController = UserInfoViewController(reactor: userInfoViewReactor).then {
             $0.tabBarItem = UITabBarItem(
                 title: "User Info",
                 image: UIImage(systemName: "person.fill"),

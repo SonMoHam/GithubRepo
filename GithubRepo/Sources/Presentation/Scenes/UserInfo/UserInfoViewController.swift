@@ -12,12 +12,14 @@ import RxSwift
 import SnapKit
 import Then
 
-final class UserInfoViewController: UIViewController {
+final class UserInfoViewController: UIViewController, View {
+    var disposeBag = DisposeBag()
     
     // MARK: Initializing
     
-    init() {
+    init(reactor: UserInfoViewReactor) {
         super.init(nibName: nil, bundle: nil)
+        self.reactor = reactor
     }
     
     @available(*, unavailable)
@@ -37,5 +39,22 @@ final class UserInfoViewController: UIViewController {
         label.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
+    }
+    
+    func bind(reactor: UserInfoViewReactor) {
+        bindAction(reactor)
+        bindState(reactor)
+    }
+}
+
+// MARK: - Bind
+
+private extension UserInfoViewController {
+    func bindAction(_ reactor: UserInfoViewReactor) {
+        
+    }
+    
+    func bindState(_ reactor: UserInfoViewReactor) {
+        
     }
 }
