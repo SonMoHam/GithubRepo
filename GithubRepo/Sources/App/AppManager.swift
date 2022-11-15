@@ -21,23 +21,23 @@ final class AppManager {
     }
     
     func configureMainInterface(in window: UIWindow?) {
-        let firstDummyVC = UIViewController().then {
+        let userInfoViewController = UserInfoViewController().then {
             $0.view.backgroundColor = .yellow.withAlphaComponent(0.2)
             $0.tabBarItem = UITabBarItem(
-                title: "first",
-                image: UIImage(systemName: "heart.fill"),
+                title: "User Info",
+                image: UIImage(systemName: "person.fill"),
                 tag: 0)
         }
-        let secondDummyVC = UIViewController().then {
+        let repositoryViewController = RepositoryViewController().then {
             $0.view.backgroundColor = .red.withAlphaComponent(0.2)
             $0.tabBarItem = UITabBarItem(
-                title: "second",
-                image: UIImage(systemName: "person.fill"),
+                title: "Repository",
+                image: UIImage(systemName: "list.bullet"),
                 tag: 1)
         }
         
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([firstDummyVC, secondDummyVC], animated: false)
+        tabBarController.setViewControllers([userInfoViewController, repositoryViewController], animated: false)
         tabBarController.tabBar.backgroundColor = .systemBackground
         
         window?.rootViewController = tabBarController
