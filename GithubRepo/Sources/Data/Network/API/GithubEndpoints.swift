@@ -17,7 +17,7 @@ final class GithubEndpoints {
             method: .get)
     }
     
-    func getRepos(userName: String) -> Endpoint<[GithubEndpoints]> {
+    func getRepos(userName: String) -> Endpoint<[GithubRepository]> {
         return Endpoint(
             baseURL: baseURL,
             path: "users/\(userName)/repos",
