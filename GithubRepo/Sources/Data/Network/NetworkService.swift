@@ -14,10 +14,9 @@ public enum NetworkError: Error {
 }
 
 public protocol NetworkService {
-    typealias CompletionHandler = (Result<Decodable, Error>) -> Void
     func request<R, E>(
         with endpoint: E,
-        completion: @escaping CompletionHandler
+        completion: @escaping (Result<R, Error>) -> Void
     ) where R : Decodable, R == E.Response, E : Requestable
 }
 
@@ -28,7 +27,7 @@ public final class AFNetworkService {
 extension AFNetworkService: NetworkService {
     public func request<R, E>(
         with endpoint: E,
-        completion: @escaping CompletionHandler
+        completion: @escaping (Result<R, Error>) -> Void
     ) where R : Decodable, R == E.Response, E : Requestable {
         guard let urlRequest = endpoint.asURLRequest() else {
             completion(.failure(NetworkError.urlGeneration))
