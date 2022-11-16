@@ -70,15 +70,18 @@ public final class StubGithubUseCase: GithubUseCase {
             GithubRepository(
                 name: "Repo 1",
                 description: "This is first repo.",
-                language: "Swift"),
+                language: "Swift",
+                svnURL: nil),
             GithubRepository(
                 name: "Repo 2",
                 description: "This is second repo.",
-                language: "Objective-C"),
+                language: "Objective-C",
+                svnURL: nil),
             GithubRepository(
                 name: "Repo 3",
                 description: "This is third repo.",
-                language: "Python"),
+                language: "Python",
+                svnURL: nil),
         ]
         return Observable.create { observer -> Disposable in
             DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
