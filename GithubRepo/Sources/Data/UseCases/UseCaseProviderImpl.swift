@@ -7,7 +7,20 @@
 
 import Foundation
 
-public final class DefaultUseCaseProvider { }
+public final class DefaultUseCaseProvider: UseCaseProvider {
+    private let endpointsProvider: EndpointsProvider
+    private let networkService: NetworkService  // ???: Provider로 변경
+    
+    public init() {
+        endpointsProvider = EndpointsProvider()
+        networkService = AFNetworkService()
+    }
+    
+    public func makeGithubUseCase() -> GithubUseCase {
+        let endpoints = endpointsProvider.makeGithubEndpoints()
+        return DefaultGithubUseCase(networkService: networkService, endpoints: endpoints)
+    }
+}
 
 public final class StubUseCaseProvider: UseCaseProvider {
     public func makeGithubUseCase() -> GithubUseCase {
