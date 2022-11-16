@@ -69,7 +69,14 @@ private extension UserInfoViewController {
     
     func bindState(_ reactor: UserInfoViewReactor) {
         reactor.state.asObservable()
-            .map { "userName: \($0.user?.name ?? "user") followers: \(($0.user?.followers ?? 0))" }
+            .map {
+                let userName = "userName: \($0.user?.name ?? "user")"
+                let bio = "bio: \($0.user?.bio ?? "bio")"
+                let publicRepos = "publicRepos: \($0.user?.publicRepos ?? 0)"
+                let followers = "followers: \(($0.user?.followers ?? 0))"
+                
+                return "\(userName)\n\(bio)\n\(publicRepos)\n\(followers)"
+            }
             .bind(to: label.rx.text)
             .disposed(by: disposeBag)
     }

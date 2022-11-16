@@ -54,7 +54,8 @@ public final class DefaultGithubUseCase: GithubUseCase {
 public final class StubGithubUseCase: GithubUseCase {
     
     public func fetchUser(name: String) -> Observable<GithubUser> {
-        let dummyUser = GithubUser(name: "sonmo", followers: 12)
+        let dummyUser = GithubUser(
+            name: "dummy " + name, bio: "iOS junior", publicRepos: 1, followers: 1)
         return Observable.create { observer -> Disposable in
             DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
                 print("\(#file) \(#function)")
