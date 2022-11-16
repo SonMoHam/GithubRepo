@@ -112,6 +112,11 @@ private extension RepositoryViewController {
     func bindState(_ reactor: RepositoryViewReactor) {
         reactor.state.asObservable()
             .map { $0.repositories }
+            .do { [weak self] in
+                if $0.isEmpty {
+                    self?.parent?.showToast(message: "no result")
+                }
+            }
             .bind(to: tableView.rx.items) { (tableView, index, element) in
                 guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: RepositoryCell.reuseIdentifier) as? RepositoryCell

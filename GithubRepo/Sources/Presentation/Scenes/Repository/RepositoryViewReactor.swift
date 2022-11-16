@@ -35,6 +35,7 @@ final class RepositoryViewReactor: Reactor {
         switch action {
         case .refresh:
             return self.useCase.fetchRepositories(of: userName)
+                .catchAndReturn([])
                 .map { .setRepositories($0) }
         }
     }
