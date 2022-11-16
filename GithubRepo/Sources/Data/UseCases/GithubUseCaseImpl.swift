@@ -8,7 +8,46 @@
 import Foundation
 import RxSwift
 
-public final class DefaultGithubUseCase { }
+public final class DefaultGithubUseCase: GithubUseCase {
+    
+    private let networkService: NetworkService
+    private let endpoints: GithubEndpoints
+    
+    init(networkService: NetworkService, endpoints: GithubEndpoints) {
+        self.networkService = networkService
+        self.endpoints = endpoints
+    }
+    
+    public func fetchUser(name: String) -> Observable<GithubUser> {
+        let endpoint = endpoints.getUser(name: name)
+        return Observable.create { [weak self] observer -> Disposable in
+            self?.networkService.request(with: endpoint) { result in
+                switch result {
+                case .success(let decodable):
+                    observer.onNext(decodable)
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    public func fetchRepositories(of userName: String) -> Observable<[GithubRepository]> {
+        let endpoint = endpoints.getRepos(userName: userName)
+        return Observable.create { [weak self] observer -> Disposable in
+            self?.networkService.request(with: endpoint) { result in
+                switch result {
+                case .success(let decodable):
+                    observer.onNext(decodable)
+                case .failure(let error):
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+}
 
 // TODO: 더미 엔티티 반환
 
