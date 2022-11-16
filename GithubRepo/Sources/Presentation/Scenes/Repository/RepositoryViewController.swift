@@ -5,6 +5,7 @@
 //  Created by Son Daehong on 2022/11/15.
 //
 
+import SafariServices
 import UIKit
 
 import ReactorKit
@@ -89,6 +90,20 @@ private extension RepositoryViewController {
             .map { Reactor.Action.refresh }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
+        self.tableView.rx
+            .modelSelected(GithubRepository.self)
+            .withUnretained(self)
+            .bind { (owner, repository) in
+                guard let urlString = repository.svnURL, let url = URL(string: urlString)
+                else { return }
+                let safariVC = SFSafariViewController(url: url).then {
+                    $0.modalTransitionStyle = .coverVertical
+                    $0.modalPresentationStyle = .pageSheet
+                }
+                owner.present(safariVC, animated: true)
+                
+            }.disposed(by: disposeBag)
     }
     
     func bindState(_ reactor: RepositoryViewReactor) {
