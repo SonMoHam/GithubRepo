@@ -7,7 +7,9 @@
 
 import Foundation
 
-public struct GithubUser: Decodable {
+public struct GithubUser: Codable {
     let name: String
+    let bio: String?
+    let publicRepos: Int
     let followers: Int
 }
