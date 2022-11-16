@@ -10,14 +10,13 @@ import UIKit
 import Then
 
 final class AppManager {
-    static let sharedManager = AppManager(isTest: false)
-    static let stubManager = AppManager(isTest: true)
+    static let sharedManager = AppManager(useCaseProvider: DefaultUseCaseProvider())
+    static let stubManager = AppManager(useCaseProvider: StubUseCaseProvider())
     
     private let networkUseCaseProvider: UseCaseProvider
     
-    private init(isTest: Bool) {
-            networkUseCaseProvider = StubUseCaseProvider()
-        // TODO: if isTest 따라서 Provider 생성
+    private init(useCaseProvider: UseCaseProvider) {
+        self.networkUseCaseProvider = useCaseProvider
     }
     
     func configureMainInterface(in window: UIWindow?) {
