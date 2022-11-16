@@ -77,6 +77,7 @@ final class RepositoryViewController: UIViewController, View {
     }
     
     func bind(reactor: RepositoryViewReactor) {
+        bindView(reactor)
         bindAction(reactor)
         bindState(reactor)
     }
@@ -85,12 +86,7 @@ final class RepositoryViewController: UIViewController, View {
 // MARK: - Bind
 
 private extension RepositoryViewController {
-    func bindAction(_ reactor: RepositoryViewReactor) {
-        self.rx.viewDidLoad
-            .map { Reactor.Action.refresh }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
+    func bindView(_ reactor: RepositoryViewReactor) {
         self.tableView.rx
             .modelSelected(GithubRepository.self)
             .withUnretained(self)
@@ -104,6 +100,13 @@ private extension RepositoryViewController {
                 owner.present(safariVC, animated: true)
                 
             }.disposed(by: disposeBag)
+    }
+    
+    func bindAction(_ reactor: RepositoryViewReactor) {
+        self.rx.viewDidLoad
+            .map { Reactor.Action.refresh }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
     
     func bindState(_ reactor: RepositoryViewReactor) {
