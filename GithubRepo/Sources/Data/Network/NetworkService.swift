@@ -37,6 +37,7 @@ extension AFNetworkService: NetworkService {
             .responseDecodable(of: R.self) { response in
                 switch response.result {
                 case .success(let decodable):
+                    dump(decodable)
                     completion(.success(decodable))
                 case .failure(let error):
                     completion(.failure(error))
