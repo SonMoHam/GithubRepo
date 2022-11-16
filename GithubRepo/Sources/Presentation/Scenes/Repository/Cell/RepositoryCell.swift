@@ -56,8 +56,8 @@ final class RepositoryCell: UITableViewCell {
     // 단순 표시 용이라면 configure, 동작 or 조작 추가된다면 reactor 통해 state 받아야 할 것
     func configure(_ repo: GithubRepository) {
         self.titleLabel.text = repo.name
-        self.descriptionLabel.text = repo.description
-        self.languageLabel.text = repo.language
+        self.descriptionLabel.text = repo.description ?? "no description"
+        self.languageLabel.text = repo.language ?? "no language"
     }
     
     private func setupConstraints() {
