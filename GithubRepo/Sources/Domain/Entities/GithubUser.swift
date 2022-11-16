@@ -12,4 +12,9 @@ public struct GithubUser: Codable {
     let bio: String?
     let publicRepos: Int
     let followers: Int
+    
+    enum CodingKeys: String, CodingKey {
+      case name, bio, followers
+      case publicRepos = "public_repos"
+    }
 }
