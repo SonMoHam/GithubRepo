@@ -13,7 +13,7 @@ import RxSwift
 import SnapKit
 import Then
 
-final class RepositoryViewController: UIViewController, View {
+public final class RepositoryViewController: UIViewController, View {
     
     // MARK: Constants
     
@@ -24,7 +24,7 @@ final class RepositoryViewController: UIViewController, View {
     
     // MARK: Properties
     
-    var disposeBag = DisposeBag()
+    public var disposeBag = DisposeBag()
     
     lazy var tableViewLabel = UILabel().then {
         let userName = self.reactor?.userName ?? "user"
@@ -41,7 +41,7 @@ final class RepositoryViewController: UIViewController, View {
     
     // MARK: Initializing
     
-    init(reactor: RepositoryViewReactor) {
+    public init(reactor: RepositoryViewReactor) {
         super.init(nibName: nil, bundle: nil)
         self.reactor = reactor
     }
@@ -53,7 +53,7 @@ final class RepositoryViewController: UIViewController, View {
     
     // MARK: View Life Cycle
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableViewLabel)
         view.addSubview(tableView)
@@ -76,7 +76,7 @@ final class RepositoryViewController: UIViewController, View {
         }
     }
     
-    func bind(reactor: RepositoryViewReactor) {
+    public func bind(reactor: RepositoryViewReactor) {
         bindView(reactor)
         bindAction(reactor)
         bindState(reactor)

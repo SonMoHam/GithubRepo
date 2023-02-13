@@ -8,30 +8,30 @@
 import ReactorKit
 import RxSwift
 
-final class UserInfoViewReactor: Reactor {
+public final class UserInfoViewReactor: Reactor {
     
-    enum Action {
+    public enum Action {
         case refresh
     }
     
-    enum Mutation {
+    public enum Mutation {
         case setUser(GithubUser)
     }
     
-    struct State {
+    public struct State {
         var user: GithubUser?
     }
     
     let userName = "sonmoham"
-    let initialState: State
+    public let initialState: State
     let useCase: GithubUseCase
     
-    init(useCase: GithubUseCase) {
+    public init(useCase: GithubUseCase) {
         self.initialState = State(user: nil)
         self.useCase = useCase
     }
     
-    func mutate(action: Action) -> Observable<Mutation> {
+    public func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .refresh:
             return self.useCase.fetchUser(name: userName)
@@ -39,7 +39,7 @@ final class UserInfoViewReactor: Reactor {
         }
     }
     
-    func reduce(state: State, mutation: Mutation) -> State {
+    public func reduce(state: State, mutation: Mutation) -> State {
         var state = state
         switch mutation {
         case .setUser(let user):

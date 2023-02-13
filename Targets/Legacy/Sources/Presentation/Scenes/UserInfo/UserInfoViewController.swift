@@ -12,11 +12,11 @@ import RxSwift
 import SnapKit
 import Then
 
-final class UserInfoViewController: UIViewController, View {
+public final class UserInfoViewController: UIViewController, View {
     
     // MARK: Properties
     
-    var disposeBag = DisposeBag()
+    public var disposeBag = DisposeBag()
     let label = UILabel().then {
         $0.numberOfLines = 0
         $0.text = "UserInfoVC"
@@ -24,7 +24,7 @@ final class UserInfoViewController: UIViewController, View {
     
     // MARK: Initializing
     
-    init(reactor: UserInfoViewReactor) {
+    public init(reactor: UserInfoViewReactor) {
         super.init(nibName: nil, bundle: nil)
         self.reactor = reactor
     }
@@ -36,7 +36,7 @@ final class UserInfoViewController: UIViewController, View {
     
     // MARK: View Life Cycle
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(label)
         setupConstraints()
@@ -50,7 +50,7 @@ final class UserInfoViewController: UIViewController, View {
         }
     }
     
-    func bind(reactor: UserInfoViewReactor) {
+    public func bind(reactor: UserInfoViewReactor) {
         print(#function)
         bindAction(reactor)
         bindState(reactor)

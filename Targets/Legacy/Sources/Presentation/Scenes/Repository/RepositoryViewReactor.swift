@@ -8,30 +8,30 @@
 import ReactorKit
 import RxSwift
 
-final class RepositoryViewReactor: Reactor {
+public final class RepositoryViewReactor: Reactor {
     
-    enum Action {
+    public enum Action {
         case refresh
     }
     
-    enum Mutation {
+    public enum Mutation {
         case setRepositories([GithubRepository])
     }
     
-    struct State {
+    public struct State {
         var repositories: [GithubRepository]
     }
     
     let userName = "sonmoham"
-    let initialState: State
+    public let initialState: State
     let useCase: GithubUseCase
     
-    init(useCase: GithubUseCase) {
+    public init(useCase: GithubUseCase) {
         self.initialState = State(repositories: [])
         self.useCase = useCase
     }
     
-    func mutate(action: Action) -> Observable<Mutation> {
+    public func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .refresh:
             return self.useCase.fetchRepositories(of: userName)
@@ -40,7 +40,7 @@ final class RepositoryViewReactor: Reactor {
         }
     }
     
-    func reduce(state: State, mutation: Mutation) -> State {
+    public func reduce(state: State, mutation: Mutation) -> State {
         var state = state
         switch mutation {
         case .setRepositories(let repos):

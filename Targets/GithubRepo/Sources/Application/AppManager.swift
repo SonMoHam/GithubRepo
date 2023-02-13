@@ -5,9 +5,10 @@
 //  Created by Son Daehong on 2022/11/15.
 //
 
-import Foundation
 import UIKit
 import Then
+
+import Legacy
 
 final class AppManager {
     static let sharedManager = AppManager(useCaseProvider: DefaultUseCaseProvider())

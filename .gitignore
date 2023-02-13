@@ -82,7 +82,13 @@ iOSInjectionProject/
 
 
 
+### Projects ###
+*.xcworkspace
+*.xcodeproj
 
+### Tuist derived files ###
+graph.dot
+Derived/
 
 
 ## Playgrounds

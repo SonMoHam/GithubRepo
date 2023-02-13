@@ -23,6 +23,9 @@ public final class DefaultUseCaseProvider: UseCaseProvider {
 }
 
 public final class StubUseCaseProvider: UseCaseProvider {
+    public init() {
+        
+    }
     public func makeGithubUseCase() -> GithubUseCase {
         return StubGithubUseCase()
     }
