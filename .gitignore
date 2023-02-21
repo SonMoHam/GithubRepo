@@ -89,7 +89,7 @@ iOSInjectionProject/
 ### Tuist derived files ###
 graph.dot
 Derived/
-
+Tuist/Dependencie/*
 
 ## Playgrounds
 timeline.xctimeline
